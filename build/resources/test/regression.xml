@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite2" verbose="1">
+    <test name="Regression">
+        <classes>
+            <class name="com.phonebook.tests.HomePageTests"/>
+            <class name="com.phonebook.tests.LoginTests">
+                <parameter name="email" value="star@gmail.com"></parameter>
+                <parameter name="password" value="Star123!$"></parameter>
+                <methods>
+                    <exclude name=".*Negative.*"></exclude>
+                </methods>
+            </class>
+            <class name="com.phonebook.tests.AddContactTests">
+                <methods>
+                    <exclude name=".*From.*">
+
+                    </exclude>
+                </methods>
+
+            </class>
+            <class name="com.phonebook.tests.RemoveContactTests"/>
+        </classes>
+    </test>
+</suite>
